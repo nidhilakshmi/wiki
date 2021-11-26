@@ -7,8 +7,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1><% @article.title %></h1>
-<p><%= @article.body %>
-   <%= @article.image_url %>
+<p>
+  <%= @article.body %>
+   <%= image_tag@article.image_url,align: 'right'%><br>
+   
 </p>
 
 <% if user_signed_in? %>
