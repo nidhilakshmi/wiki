@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<% if request.original_url.split('=').last.include? '/'%>
 <h1>All Articles</h1>
-
+<% else %>
+<h1>All <%request.original_url.split('=').last %>Articles</h1>
+<% end %>
 
     <% @articles.each do |article| %>
 
